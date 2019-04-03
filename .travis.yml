@@ -1,0 +1,15 @@
+language: c
+script: make && make fs.img
+deploy:
+  provider: releases
+  api_key:
+    secure: rzKNx2N6lxt2vafiLxxFF41dZB/DWbNv6Yxo4Z7eg5rZDLfgG9Z6bCcOC9ZROtyzaXeSRmFXMYFvIukixOCTocEBf3C5xVJMbPaT3Q8UT6wlUl+GkZMQ6h0uRNj2cNCtQddSygTp352jhn3JjiVHLf2CWNMLx4NHwn2VrlCo4/otMmu7ISHFe6ylV7LH+1TMVetHJZoVUh8xizEsuAicPqRpTmHJgPp8mAKOYs5YiXAR/TDVzWh+KjA0h/EiiwDE5lSbhWjaNATN92nXLT6xrTHB8w0/JZdSCsh/tZU1ftNKoQX02Hw2MfXHTMNrlHrRrdrYO2bkXSFidHFgjT6QCWOX2EvaGTLGjROvsueAYLU/412sttjrWwNgPoFBC6A69s1Jj1XQcRjIeJDgaeVNFbF/gRO5xZKwU5f5UhwVRCRLyH5CH9SurHBLWsqF/s3pHVZMCUQDViulDsOk6Us4lhLVOrQrHDzRuCA2VJLCirrTlLLTuj19KO/MfSJh7X0v/Y1mMscO8mxMLbIp3UJVx4M5/Mn3VStvZBNYCMMPkmyv32npipSTYrMm0YaCY+3jFsmjoTdxoRISv+z/oqCmy8HA5bR+JUUlFwb5B5THW8q/Yl+WGqq6KgLHmu5B8GbRoy0bsaafurJRdmaXhRgdMBLD946sUWZM4vzLlUebK7c=
+  file: xv6.img
+file:
+    - fs.img
+    - xv6.img
+  skip_cleanup: true
+on:
+    repo: noespinoza/xv6-public
+    branch: heads/master
+tags: true

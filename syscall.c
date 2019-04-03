@@ -103,9 +103,11 @@ extern int sys_unlink(void);
 extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
+//procs llamada
+extern int sys_procs(void);
 
 static int (*syscalls[])(void) = {
-[SYS_fork]    sys_fork,
+[SYS_fork]    sys_fork, 
 [SYS_exit]    sys_exit,
 [SYS_wait]    sys_wait,
 [SYS_pipe]    sys_pipe,
@@ -126,6 +128,9 @@ static int (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+//procs llamada
+[SYS_procs]   sys_procs,
+
 };
 
 void
@@ -142,4 +147,10 @@ syscall(void)
             curproc->pid, curproc->name, num);
     curproc->tf->eax = -1;
   }
+}
+
+int
+SYS_procs(void)
+{
+  return "Hola";
 }

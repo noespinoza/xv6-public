@@ -9,7 +9,7 @@ struct spinlock;
 struct sleeplock;
 struct stat;
 struct superblock;
-
+ 
 // bio.c
 void            binit(void);
 struct buf*     bread(uint, uint);
@@ -17,6 +17,7 @@ void            brelse(struct buf*);
 void            bwrite(struct buf*);
 
 // console.c
+
 void            consoleinit(void);
 void            cprintf(char*, ...);
 void            consoleintr(int(*)(void));
@@ -120,6 +121,8 @@ void            userinit(void);
 int             wait(void);
 void            wakeup(void*);
 void            yield(void);
+//procs llamada
+int 			procs(void);
 
 // swtch.S
 void            swtch(struct context**, struct context*);
