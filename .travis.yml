@@ -3,13 +3,12 @@ script: make && make fs.img
 deploy:
   provider: releases
   api_key:
-    secure: rzKNx2N6lxt2vafiLxxFF41dZB/DWbNv6Yxo4Z7eg5rZDLfgG9Z6bCcOC9ZROtyzaXeSRmFXMYFvIukixOCTocEBf3C5xVJMbPaT3Q8UT6wlUl+GkZMQ6h0uRNj2cNCtQddSygTp352jhn3JjiVHLf2CWNMLx4NHwn2VrlCo4/otMmu7ISHFe6ylV7LH+1TMVetHJZoVUh8xizEsuAicPqRpTmHJgPp8mAKOYs5YiXAR/TDVzWh+KjA0h/EiiwDE5lSbhWjaNATN92nXLT6xrTHB8w0/JZdSCsh/tZU1ftNKoQX02Hw2MfXHTMNrlHrRrdrYO2bkXSFidHFgjT6QCWOX2EvaGTLGjROvsueAYLU/412sttjrWwNgPoFBC6A69s1Jj1XQcRjIeJDgaeVNFbF/gRO5xZKwU5f5UhwVRCRLyH5CH9SurHBLWsqF/s3pHVZMCUQDViulDsOk6Us4lhLVOrQrHDzRuCA2VJLCirrTlLLTuj19KO/MfSJh7X0v/Y1mMscO8mxMLbIp3UJVx4M5/Mn3VStvZBNYCMMPkmyv32npipSTYrMm0YaCY+3jFsmjoTdxoRISv+z/oqCmy8HA5bR+JUUlFwb5B5THW8q/Yl+WGqq6KgLHmu5B8GbRoy0bsaafurJRdmaXhRgdMBLD946sUWZM4vzLlUebK7c=
-  file: xv6.img
-file:
+    secure: kfFR4PziC+k9HZCoZguU7HhejEPTLEJWp0DV/4vslYAh8PEJx6hfzsOzKNILhM1mpb000eJpQ6uUcabdrLO0DLPxOzviD0NE3GgTV3BrfdfbUCOPq7OVWKq+K26Q/YaSt4Y+xm0E4DiqMWxJsaZbTTMt4g1vlNCj+UpJMcHen32uOa+mDSxBllHh92TohzCKp9kqMtl/YSYAO+K8Cfc99prHK6E2yBUfmplgTtnSMv5n5wwrE/I0sN95NdOsk9mnBz04glkm6jUv4C6bl2QOcq5GW+mvBneg0JpeoWEIPzjqSctyCouOaYH7RaO9yomGhBc+ef4RX59LfIiYXpYcBWgruWMXKQCq2bMDOFfEyefnYOIuQ/MTOSKPnuy2NTVkMLXx63FtXFCyI6WYcN67/frsS49kCObgTXCxNNiDByM0nB3PBlEYVYTNBe09Wzc9NXSdxfrHDeEF2clvJwyPhaBm3iMEG43yMvm2tTvDPflzRa41dbG4KLho3190Hxxx/oWBevq/DJ/2vTEL1FhKZ7ugMrs13qEQ8ZDtm3jjpaK4stLfgR9aECiOZ8+A6Vuxg0lzy9muYsl1ea8rKUy0BetVKGVqffFhaUdS1StabX+WKvdU7YXkJNOdWbZzyk7k0tn+taVGHNAFr0Vh7FCh5XWqHPIyJ600QWR6tCAkpn8=
+  on:
+    repo: noespinoza/xv6-public
+    branch: project_1
+  file:
     - fs.img
     - xv6.img
   skip_cleanup: true
-on:
-    repo: noespinoza/xv6-public
-    branch: heads/master
-tags: true
+  tags: true
