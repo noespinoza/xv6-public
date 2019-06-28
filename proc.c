@@ -15,8 +15,6 @@ struct {
 static struct proc *initproc;
 
 int nextpid = 1;
-// procs llamada
-//int cuenta=0;
 
 extern void forkret(void);
 extern void trapret(void);
@@ -540,31 +538,4 @@ procdump(void)
   }
 }
 
-// procs llamada
-
-
-for (int p = 0;  ++i)
- {
-   procs= procs++
- } 
-
-// escribir aqui el codigo de contar ESTO ES OTRO
-//int
-//procs()
-//{
-  //struct proc *p;
-  //sti();
-  //acquire (&ptable.lock);
-  //cprintf ("name \t pid \t state \t \n");
-  //for (p = ptable.proc; p < &ptable.proc[NPROC]; p++){
-//if ( p->state == SLEEPING )
-//cprintf ("%s \t %d \t SLEEPING \t \n ", p->name, p->pid);
-//else if ( p->state == RUNNING )
-//cprintf ("%s \t %d \t RUNNING \t \n ", p->name, p->pid);
-//else if ( p->state == RUNNABLE )
-  //cprintf ("%s \t %d \t RUNNABLE \t \n ", p->name, p->pid);
-  //}
-//release(&ptable.lock);
-//return 22;
-//}
 

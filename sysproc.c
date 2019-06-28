@@ -89,11 +89,5 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
-// procs llamada
-int 
-sys_procs (void)
-{
- return procs ();
 
-}
 

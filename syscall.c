@@ -103,8 +103,7 @@ extern int sys_unlink(void);
 extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
-//procs llamada
-extern int sys_procs(void);
+
 
 static int (*syscalls[])(void) = {
 [SYS_fork]    sys_fork, 
@@ -149,8 +148,4 @@ syscall(void)
   }
 }
 
-int
-SYS_procs(void)
-{
-  return "Hola";
-}
+
